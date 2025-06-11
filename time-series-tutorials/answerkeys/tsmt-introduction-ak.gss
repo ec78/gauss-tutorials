@@ -1,0 +1,35 @@
+/*
+** TSMT Introduction
+*/ 
+
+// Load library to make 'tsmt' available
+library tsmt;
+
+/*
+** Example one: Dependent data only
+**              using data matrices
+*/
+
+// Create file name with full path
+// the data file `mink.csv` is located 
+// in the TSMT examples directory
+fname = getGAUSSHome("pkgs/tsmt/examples/mink.csv");
+
+// Load two variable into the matrix `y`
+y = loadd(fname, "LogMink + LogMusk");
+ 
+// Perform estimation using `varmaFit`
+call varmaFit(y, 3);
+
+/*
+** Example two: Calling with a  
+**              formula string      
+*/
+
+// Create file name with full path
+// the data file var_enders_trans.gdat
+// is in the TSMT examples directory
+fname = getGAUSSHome("pkgs/tsmt/examples/var_enders_trans.gdat");
+
+// Perform estimation using a formula string
+call varmaFit(fname, ".", 3 );
