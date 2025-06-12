@@ -1,0 +1,125 @@
+/*
+** TSMT filtering data with the Kalman Filter
+*/ 
+
+// Load TSMT library
+library tsmt;
+ 
+/*
+** Simulating AR(2) data
+*/
+seed = 527453;
+ 
+// Intercept
+b = 0.3|-0.6;
+ 
+// AR terms
+p = 2;
+ 
+// MA terms
+q = 0;
+ 
+// Constant
+const = 0;
+ 
+// Trend
+trend = 0;
+ 
+// Number of observations
+n = 150;
+ 
+// Number of replications
+k = 1;
+ 
+// Standard deviation of error process
+std = 1;
+ 
+// Generate data
+yt = simarmamt(b, p, q, const, trend, n, k, std, seed)';
+ 
+/*
+** Use the two true
+** phi values
+*/
+phi = 0.3|-0.6;
+ 
+// State disturbance sigma
+sigma2_q = 1;
+ 
+// Observation disturbance sigma
+sigma2_h = 1;
+ 
+// Design matrix
+Z = {1 0};
+ 
+// Measurement equation intercept
+d = 0;
+ 
+// Measurement equation disturbance
+H = sigma2_h;
+ 
+// Transition matrix
+T = {phi[1] phi[2], 1 0};
+ 
+// Transition equation intercept
+c = 0;
+ 
+// Transition equation disturbance
+Q = sigma2_q;
+ 
+// Selection matrix
+R = {1, 0};
+ 
+// Initial state mean
+a_0 = 0|0;
+ 
+// Initial state covariance
+P_0 = {1 0, 0 1};
+ 
+struct kalmanResult rslt;
+rslt = kalmanFilter(yt, Z, d, H, T, c, R, Q, a_0, p_0);
+
+ /****************************************************** 
+ Plotting Section 
+ *******************************************************/ 
+ // Layout 
+ plotOpenWindow(); 
+ 
+ // Plot control structure 
+ struct plotControl myPlot; 
+ myPlot = plotGetDefaults("XY"); 
+ 
+ // Font settings 
+ font_name = "Helvetica Neue"; 
+ font_color = "#3e3e3e"; 
+ title_size = 18; 
+ label_size = 14; 
+ legend_size = 12; 
+ 
+ /*********************************************** 
+ Predicted state 
+ ************************************************/ 
+ // Legend 
+ plotSetLegend(&myPlot, "Predicted"$|"Observed"); 
+ 
+ plotSetLegendFont(&myPlot, font_name, legend_size, font_color); 
+ 
+ // Change color of axes numbers 
+ plotSetTicLabelFont(&myPlot, font_name, legend_size, font_color); 
+ 
+ // Title 
+ plotSetTitle(&myPlot, "Kalman Filter Predicted State: AR(2) Model", font_name, title_size, font_color); 
+ 
+ // Set up to add plot of filtered data 
+ // Turn line symbol off 
+ plotSetLineSymbol(&myPlot, -1); 
+ x = seqa(1, 1, cols(yt)); 
+ 
+ // XY plot of filtered data 
+ plotXY(myPlot, x, rslt.predicted_state[2, 2:cols(yt)+1]'); 
+ 
+ /*********************************************** 
+ Observed Data 
+ ************************************************/ 
+ // Plot scatter of observed data 
+ plotAddScatter(x, yt');
