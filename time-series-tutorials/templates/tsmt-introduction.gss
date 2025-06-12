@@ -13,13 +13,13 @@
 // Create file name with full path
 // the data file `mink.csv` is located 
 // in the TSMT examples directory
-/****** FILE IN HERE AND REMOVE COMMENT ******/
+/****** FILL IN HERE AND REMOVE COMMENT ******/
 
 // Load two variable into the matrix `y`
-/****** FILE IN HERE AND REMOVE COMMENT ******/
+/****** FILL IN HERE AND REMOVE COMMENT ******/
 
 // Perform estimation using `varmaFit`
-/****** FILE IN HERE AND REMOVE COMMENT ******/
+/****** FILL IN HERE AND REMOVE COMMENT ******/
 
 /*
 ** Example two: Calling with a  
@@ -29,8 +29,8 @@
 // Create file name with full path
 // the data file var_enders_trans.gdat
 // is in the TSMT examples directory
-/****** FILE IN HERE AND REMOVE COMMENT ******/
+/****** FILL IN HERE AND REMOVE COMMENT ******/
 
 // Perform estimation using a formula string
-/****** FILE IN HERE AND REMOVE COMMENT ******/
+/****** FILL IN HERE AND REMOVE COMMENT ******/
 

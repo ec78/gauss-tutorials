@@ -1,0 +1,44 @@
+/*
+** TSMT ARIMA Simulation
+*/ 
+
+// Load library to make 'tsmt' available
+// FILL IN HERE AND REMOVE COMMENT
+
+/*
+** Simulating ARIMA data given by
+**            y{t} = 1.5 + u{t}
+**  u{t} - 0.5u{t-1} + 0.8u{t-2} = e{t}
+**            e{t} ~ N(0,1)
+*/
+
+// Specify ARMA Parameters
+// AR parameters first 
+// MA parameter following
+/****** FILL IN HERE AND REMOVE COMMENT ******/
+
+// Specify MA order
+/****** FILL IN HERE AND REMOVE COMMENT ******/
+
+// Specify AR order
+/****** FILL IN HERE AND REMOVE COMMENT ******/
+
+// Specify deterministic features
+// constant and trend
+/****** FILL IN HERE AND REMOVE COMMENT ******/
+
+// Number of observations
+/****** FILL IN HERE AND REMOVE COMMENT ******/
+
+// Number of series to simulate
+// and number of columns of simulated data
+/****** FILL IN HERE AND REMOVE COMMENT ******/
+
+// Standard deviation of the error term
+/****** FILL IN HERE AND REMOVE COMMENT******/
+
+// Set seed for repeatable simulations
+/****** FILL IN HERE AND REMOVE COMMENT ******/
+
+// Perform simulation
+/****** FILL IN HERE AND REMOVE COMMENT

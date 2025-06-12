@@ -1,0 +1,60 @@
+/*
+** TSMT Visualizing Data
+*/ 
+
+// Load library to make 'tsmt' available
+/****** FILL IN HERE AND REMOVE COMMENT ******/
+
+// Load wpi.gdat data 
+// from the GAUSS tsmt/examples directory 
+/****** FILL IN HERE AND REMOVE COMMENT ******/
+
+/*
+** Example One: Quick time series plot
+**              using formula string
+*/
+
+// Plot function using plotXY 
+// and formula string
+/****** FILL IN HERE AND REMOVE COMMENT ******/
+
+/*
+** Example Two: Customizing the plot
+**              with plotControl structure
+**              and plotTS
+*/
+
+// Declare 'myPlot' to be a plotControl structure
+// and fill with default settings for XY plots
+/****** FILL IN HERE AND REMOVE COMMENT ******/
+
+// Set the title text, font and font-size
+/****** FILL IN HERE AND REMOVE COMMENT ******/
+
+// Set the Y-axis text, font and font-size
+/****** FILL IN HERE AND REMOVE COMMENT ******/
+
+// Set the X-tick label format to 4 digit year
+/****** FILL IN HERE AND REMOVE COMMENT ******/
+
+// Place an X-tick every 5 years (20 quarters),
+// starting with January of 1960
+/****** FILL IN HERE AND REMOVE COMMENT ******/
+
+// Draw the plot, using the settings
+// in 'myPlot'
+/****** FILL IN HERE AND REMOVE COMMENT ******/
+
+/*
+** Example Three: Plot the first differences
+*/
+// Calculate first differences
+/****** FILL IN HERE AND REMOVE COMMENT ******/
+
+// Change the Y-label text, but keep the
+// previously set font and font-size
+/****** FILL IN HERE AND REMOVE COMMENT ******/
+
+// Plot the first differences
+/****** FILL IN HERE AND REMOVE COMMENT ******/
+

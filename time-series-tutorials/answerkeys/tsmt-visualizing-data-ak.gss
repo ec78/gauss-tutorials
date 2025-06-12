@@ -1,0 +1,123 @@
+/*
+** TSMT Visualizing Data
+*/ 
+
+// Load library to make 'tsmt' available
+library tsmt;
+
+// Load wpi.gdat data 
+// from the GAUSS tsmt/examples directory 
+fname = getGAUSSHome("pkgs/tsmt/examples/wpi.gdat");
+y = loadd(fname);
+
+/*
+** Example One: Quick time series plot
+**              using formula string
+*/
+
+// Plot `ln_wpi` against `Date
+// using plotXY formula string
+plotOpenWindow();
+plotXY(y, "ln_wpi~Date");
+
+/*
+** Example Two: Customizing the plot
+**              with plotControl structure
+**              and plotTS
+*/
+
+// Declare 'myPlot' to be a plotControl structure
+// and fill with default settings for XY plots
+struct plotControl myPlot;
+myplot = plotGetDefaults("XY");
+
+// Set the title text, font and font-size
+plotSetTitle(&myPlot, "U.S. Wholesale Price Index ", "Helvetica Neue", 18);
+
+// Set the Y-axis text, font and font-size
+plotSetYLabel(&myPlot, "ln(wpi)", "Helvetica Neue", 14);
+
+// Place an X-tick every 10 years (40 quarters),
+// starting with January of 1960
+plotSetXTicInterval(&myPlot, 40); 
+
+//// Set the X-tick label format to 4 digit year
+plotSetXTicLabel(&myPlot, "YYYY");
+
+// Draw the plot, using the settings
+// in 'myPlot'
+plotOpenWindow();
+plotXY(myPlot, y, "ln_wpi~Date");
+
+/*
+** Example Three: Plot the first differences
+*/
+// Calculate the first differences
+wpi_diff = tsdiff(y[. ,"ln_wpi"], 1);
+
+// Change the Y-label text, but keep the
+// previously set font and font-size
+plotSetYlabel(&myPlot, "First Differences ln(wpi)");
+
+// Plot the first differences
+// this time using data matrices
+// trimming one observation off date
+plotOpenWindow();
+plotXY(myPlot, trimr(y[., "Date"], 1, 0), wpi_diff);
+
+/*
+** Extra Credit: Combining the plots
+*/
+plotOpenWindow();
+
+// Set up common plot features
+// Set the X-tick label format to 4 digit year
+plotSetXTicLabel(&myPlot, "YYYY");
+
+// Place an X-tick every 5 years (20 quarters),
+// starting with January of 1960
+plotSetXTicInterval(&myPlot, 40);
+
+// Set the axes lines to be black and 1 pixel thick
+plotSetAxesPen(&myPlot, 1, "black");
+
+// Set the title text, font and font-size
+plotSetTitle(&myPlot, "U.S. Wholesale Price Index ", "Helvetica Neue", 12);
+
+/********************
+Plot level WPI
+*********************/
+// Set the Y-axis text, font and font-size
+plotSetYLabel(&myPlot, "ln(wpi)", "Helvetica Neue", 10);
+
+// Divide the plot canvas into a 2x1
+// grid and place the next plot
+// into the first cell
+plotLayout(2, 1, 1);
+
+// Draw the plot, using the settings
+// in 'myPlot'
+plotXY(myPlot, y, "ln_wpi~Date");
+
+/********************
+Plot differences WPI
+*********************/
+// Set the Y-axis text, font and font-size
+plotSetYLabel(&myPlot, " First Differences ln(wpi)", "Helvetica Neue", 10);
+
+// Turn off the title for the second plot
+plotSetTitle(&myPlot, "");
+
+// Divide the plot canvas into a 2x1
+// grid and place the next plot
+// into the second cell
+plotLayout(2, 1, 2);
+
+// Plot the first differences
+// this time using data matrices
+// trimming one observation off date
+plotXY(myPlot, trimr(y[., "Date"], 1, 0), wpi_diff);
+
+// Restore the plot layout to the
+// default setting for individual plots
+plotClearLayout();

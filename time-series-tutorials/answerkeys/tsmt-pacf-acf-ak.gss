@@ -1,0 +1,69 @@
+/*
+** TSMT Finding the PACF and ACF
+*/ 
+
+// Load library to make 'tsmt' available
+library tsmt;
+
+// Load `y_sim data if not in workspace
+y_sim = loadd(__FILE_DIR $+ "/y_sim.gdat");
+
+/*
+** Find autocorrelations for 1 to 10 lags  
+*/
+
+
+// Maximum number of autocorrelations
+k = 10;
+
+// Order of differencing
+d = 0;
+
+// Compute autocorrelations
+a = acf(y_sim, k, d);
+ 
+// Print autocorrelations
+a_lab = seqa(1, 1, rows(a));
+print "Lags"$~"ACF";
+print ntos(a_lab~a, 4);
+
+/*
+** Plot ACF  
+*/
+// Maximum number of autocorrelations
+k = 10;
+ 
+// Order of differencing
+d = 0;
+ 
+// Compute and plot the sample autocorrelations
+plotACF(y_sim, k, d);
+
+/*
+** Find partial autocorrelations for 1 to 10 lags  
+*/
+
+// Maximum number of autocorrelations
+k = 10;
+ 
+// Order of differencing
+d = 0;
+ 
+// Compute the partial autocorrelations
+p = pacf(y_sim, k, d);
+ 
+// Display autocorrelations
+a_lab = seqa(1, 1, rows(p));
+print "Lags"$~"PACF";
+print ntos(a_lab~p, 4);
+/*
+** Plot PACF  
+*/
+// Maximum number of autocorrelations
+k = 10;
+ 
+// Order of differencing
+d = 0;
+ 
+// Compute and plot the partial autocorrelation function
+plotPACF(y_sim, k, d);

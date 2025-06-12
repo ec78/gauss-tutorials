@@ -1,0 +1,50 @@
+/*
+** TSMT Estimating ARIMA Models
+*/ 
+
+// Load library to make 'tsmt' available
+/****** FILL IN HERE AND REMOVE COMMENT ******/
+
+// Load `y_sim data if not in workspace
+/****** FILL IN HERE AND REMOVE COMMENT ******/
+
+/*
+** Example One: Estimating AR(2) Model
+**              with Matrix Inputs
+*/
+
+// AR order
+/****** FILL IN HERE AND REMOVE COMMENT ******/
+
+// Call arimaFit
+/****** FILL IN HERE AND REMOVE COMMENT ******/
+
+
+/*
+** Example Two: Estimating ARIMA(2, 1, 0) Model
+**  
+*/
+// AR order
+/****** FILL IN HERE AND REMOVE COMMENT ******/
+
+// Order of differencing
+/****** FILL IN HERE AND REMOVE COMMENT ******/
+
+// Call arimaFit
+/****** FILL IN HERE AND REMOVE COMMENT ******/
+
+/*
+** Example Three: Estimating ARIMA(2, 0, 1) Model
+**  
+*/
+// AR order
+/****** FILL IN HERE AND REMOVE COMMENT ******/
+
+// Order of differencing
+/****** FILL IN HERE AND REMOVE COMMENT ******/
+
+// MA order
+/****** FILL IN HERE AND REMOVE COMMENT ******/
+
+// Call arimaFit
+/****** FILL IN HERE AND REMOVE COMMENT ******/

@@ -1,0 +1,48 @@
+/*
+** TSMT ARIMA Simulation
+*/ 
+
+// Load library to make 'tsmt' available
+library tsmt;
+
+/*
+** Simulating ARIMA data given by
+**            y{t} = 1.5 + u{t}
+**  u{t} - 0.5u{t-1} + 0.8u{t-2} = e{t}
+**            e{t} ~ N(0,1)
+*/
+
+// Specify ARMA Parameters
+// AR parameters first 
+// MA parameter following
+b =  { 0.5, -0.8 };
+
+// Specify MA order
+q = 0;
+
+// Specify AR order
+p = 2;
+
+// Specify deterministic features
+// constant and trend
+const = 1.5;
+tr = 0;
+
+// Number of observations
+n = 200;
+
+// Number of series to simulate
+// and number of columns of simulated data
+k = 1;
+
+// Standard deviation of the error term
+std = 1;
+
+// Set seed for repeatable simulations
+seed = 5012;
+
+// Perform simulation
+y_sim = asDF(simarmamt(b, p, q, const, tr, n, k, std, seed), "Y_ar2");
+
+// Save simulated data
+saved(y_sim, __FILE_DIR$+"/y_sim.gdat");
