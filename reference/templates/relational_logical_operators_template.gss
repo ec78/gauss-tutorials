@@ -1,0 +1,48 @@
+
+/*******************************************
+** Relational Operators
+*********************************************/
+
+// Create a sample matrix
+// YOUR CODE HERE
+
+// Check which elements are greater than 4
+// YOUR CODE HERE
+
+// Check which elements are equal to 3
+// YOUR CODE HERE
+
+// Check which elements are not equal to 5
+// YOUR CODE HERE
+
+/*******************************************
+** Logical Operators on Scalars
+*********************************************/
+
+// Declare scalars a and b
+// YOUR CODE HERE
+
+// Logical AND
+// YOUR CODE HERE
+
+// Logical OR
+// YOUR CODE HERE
+
+// Logical NOT
+// YOUR CODE HERE
+
+/*******************************************
+** Logical Operators on Matrices
+*********************************************/
+
+// Define two logical matrices
+// YOUR CODE HERE
+
+// Element-by-element AND
+// YOUR CODE HERE
+
+// Element-by-element OR
+// YOUR CODE HERE
+
+// Element-by-element NOT
+// YOUR CODE HERE

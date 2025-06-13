@@ -1,0 +1,41 @@
+/*******************************************
+** Clear workspace and screen
+*********************************************/
+
+// Clear all variables and the output window
+// YOUR CODE HERE
+
+/*******************************************
+** Generate independent variable x
+*********************************************/
+
+// Generate a 500x1 standard normal variable
+// YOUR CODE HERE
+
+// Print the variable
+// YOUR CODE HERE
+
+/*******************************************
+** Generate error term e
+*********************************************/
+
+// Create an error term with standard deviation of 5
+// YOUR CODE HERE
+
+/*******************************************
+** Define model parameters
+*********************************************/
+
+// Define b_0 (intercept)
+// YOUR CODE HERE
+
+// Define b_1 (slope)
+// YOUR CODE HERE
+
+/*******************************************
+** Generate dependent variable y
+** Model: y = b_0 + b_1 * x + err
+*********************************************/
+
+// Use the model equation to create y
+// YOUR CODE HERE

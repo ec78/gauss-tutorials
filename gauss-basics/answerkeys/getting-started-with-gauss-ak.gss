@@ -1,0 +1,73 @@
+/*******************************************
+** Body Mass Index Calculation
+*********************************************/
+
+// Calculate BMI for a single individual
+weight = 81.6;
+height = 1.75;
+bmi = weight / (height^2);
+print "BMI:" bmi;
+
+/*******************************************
+** Matrix and Vector Creation
+*********************************************/
+
+// Create two 3x1 vectors for weight and height
+weight = { 81.6, 72.5, 78.2 };
+height = { 1.75, 1.82, 1.55 };
+
+// Compute BMI for each individual using element-wise operations
+bmi = weight ./ height .^ 2;
+print "BMI Vector:" bmi;
+
+/*******************************************
+** String Creation
+*********************************************/
+
+// Create a string variable
+my_string = "This is my first string!";
+print my_string;
+
+/*******************************************
+** Print Statements
+*********************************************/
+
+// Define mass and acceleration
+mass = 12;
+acceleration = 2.5;
+
+// Calculate force
+force = mass * acceleration;
+
+// Print force using different methods
+print "Force = " force;
+print "Force = " (mass * acceleration);
+
+/*******************************************
+** Implicit Print Statements
+*********************************************/
+
+// Assign a value to mass
+mass = 4;
+
+// Implicitly print the value of mass
+mass;
+
+/*******************************************
+** Clearing Printed Output
+*********************************************/
+
+// Clear the program input/output window
+cls;
+
+/*******************************************
+** Calling Functions
+*********************************************/
+
+// Declare a 2x2 matrix
+prices = { 1.2 2.5,
+           3.1 4.7 };
+
+// Calculate the mean of each column
+col_means = meanc(prices);
+print "Column Means:" col_means;

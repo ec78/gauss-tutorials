@@ -1,0 +1,46 @@
+/*******************************************
+** Step 1: Enter the data
+*********************************************/
+
+// Create a 5x3 matrix containing our main 'auto' data
+autos = { 16 3880 231,
+          41 2040 90,
+          21 4290 350,
+          28 1800 98,
+          14 4130 302 };
+
+// A 1x3 matrix with the data for the new car
+x = { 17 3170 163 };
+
+/*******************************************
+** Step 2: Compute the Euclidean distance
+*********************************************/
+
+// Find the difference between the 3 variables in 'x' and 'autos'
+diff = x - autos;
+
+// Square each element in 'diff'
+diff_sq = diff .^ 2;
+
+// Sum across the rows
+sum_diff_sq = sumr(diff_sq);
+
+// Compute the square root of each element
+dist = sqrt(sum_diff_sq);
+
+/*******************************************
+** Step 3: Find the smallest distance
+*********************************************/
+
+// Find the index of the smallest distance
+idx = minindc(dist);
+
+// Find the smallest distance
+dist_min = dist[idx];
+
+/*******************************************
+** Step 4: Print the results
+*********************************************/
+
+print "The closest car is from row " idx;
+print "with a distance of: " dist_min;

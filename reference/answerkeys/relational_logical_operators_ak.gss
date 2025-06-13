@@ -1,0 +1,58 @@
+
+/*******************************************
+** Relational Operators
+*********************************************/
+
+// Create a sample matrix
+x = { 1, 3, 5, 7, 9 };
+
+// Check which elements are greater than 4
+print "x > 4:";
+print x.>4;
+
+// Check which elements are equal to 3
+print "x == 3:";
+print x.==3;
+
+// Check which elements are not equal to 5
+print "x != 5:";
+print x.!=5;
+
+/*******************************************
+** Logical Operators on Scalars
+*********************************************/
+
+a = 1;
+b = 0;
+
+// Logical AND
+print "a and b:";
+print (a and b);
+
+// Logical OR
+print "a or b:";
+print (a or b);
+
+// Logical NOT
+print "not a:";
+print (not a);
+
+/*******************************************
+** Logical Operators on Matrices
+*********************************************/
+
+// Define two logical matrices
+x = { 1, 0, 1, 0 };
+y = { 1, 1, 0, 0 };
+
+// Element-by-element AND
+print "x .and y:";
+print (x .and y);
+
+// Element-by-element OR
+print "x .or y:";
+print (x .or y);
+
+// Element-by-element NOT
+print ".not x:";
+print (.not x);

@@ -1,0 +1,79 @@
+/*******************************************
+** Body Mass Index Calculation
+*********************************************/
+
+// Declare weight and height variables
+// YOUR CODE HERE
+
+// Calculate BMI
+// YOUR CODE HERE
+
+// Print the BMI
+// YOUR CODE HERE
+
+/*******************************************
+** Matrix and Vector Creation
+*********************************************/
+
+// Create vectors for weight and height
+// YOUR CODE HERE
+
+// Compute BMI using element-wise operations
+// YOUR CODE HERE
+
+// Print the BMI vector
+// YOUR CODE HERE
+
+/*******************************************
+** String Creation
+*********************************************/
+
+// Create and print a string variable
+// YOUR CODE HERE
+
+/*******************************************
+** Workspace Management
+*********************************************/
+
+// Clear all variables from workspace
+// YOUR CODE HERE
+
+/*******************************************
+** Print Statements
+*********************************************/
+
+// Define mass and acceleration
+// YOUR CODE HERE
+
+// Compute force
+// YOUR CODE HERE
+
+// Print the force using different methods
+// YOUR CODE HERE
+
+/*******************************************
+** Implicit Print Statements
+*********************************************/
+
+// Assign a value to a variable and allow implicit print
+// YOUR CODE HERE
+
+/*******************************************
+** Clearing Printed Output
+*********************************************/
+
+// Clear the program I/O window
+// YOUR CODE HERE
+
+/*******************************************
+** Calling Functions
+*********************************************/
+
+// Create a 2x2 matrix
+// YOUR CODE HERE
+
+// Calculate the mean of each column
+// YOUR CODE HERE
+
+// Print the result
+// YOUR CODE HERE

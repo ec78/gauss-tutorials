@@ -1,0 +1,42 @@
+/*******************************************
+** Step 1: Enter the data
+*********************************************/
+
+// Create a matrix with car data
+// YOUR CODE HERE
+
+// Create a matrix for the new car data
+// YOUR CODE HERE
+
+/*******************************************
+** Step 2: Compute the Euclidean distance
+*********************************************/
+
+// Compute the difference between the new car and each row of the car data
+// YOUR CODE HERE
+
+// Square each element of the difference
+// YOUR CODE HERE
+
+// Sum the squared differences across columns
+// YOUR CODE HERE
+
+// Take the square root of each sum to compute distances
+// YOUR CODE HERE
+
+/*******************************************
+** Step 3: Find the smallest distance
+*********************************************/
+
+// Find the index of the minimum distance
+// YOUR CODE HERE
+
+// Get the value of the minimum distance
+// YOUR CODE HERE
+
+/*******************************************
+** Step 4: Print the results
+*********************************************/
+
+// Print the index and value of the nearest neighbor
+// YOUR CODE HERE

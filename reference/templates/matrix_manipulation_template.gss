@@ -1,0 +1,50 @@
+
+/*******************************************
+** Creating matrices
+*********************************************/
+
+// Create a 1x6 row vector
+// YOUR CODE HERE
+
+// Create a 3x2 matrix
+// YOUR CODE HERE
+
+// Create a 3x1 column vector
+// YOUR CODE HERE
+
+// Print the matrices
+// YOUR CODE HERE
+
+/*******************************************
+** Scalar values
+*********************************************/
+
+// Declare a scalar using both methods
+// YOUR CODE HERE
+
+/*******************************************
+** Creating matrices with functions
+*********************************************/
+
+// Create matrices using GAUSS functions
+// YOUR CODE HERE
+
+/*******************************************
+** Getting the size of matrices
+*********************************************/
+
+// Create a matrix and print its dimensions
+// YOUR CODE HERE
+
+/*******************************************
+** Matrix concatenation
+*********************************************/
+
+// Horizontal matrix concatenation
+// YOUR CODE HERE
+
+// Vertical matrix concatenation
+// YOUR CODE HERE
+
+// Combined vertical and horizontal concatenation
+// YOUR CODE HERE
